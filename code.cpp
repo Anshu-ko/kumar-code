@@ -1,15 +1,9 @@
 #include <iostream>
-
 using namespace std;
-int main(){
-    int a =12;
-    int b = 23;
-    cout<<"print tha digit "<<a;
+
+int main() {
+    // This line prints the message to the screen
+    cout << "Hello, World!" << endl;
     
-
-
-
-
-
     return 0;
 }
