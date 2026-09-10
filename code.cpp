@@ -1,38 +1,43 @@
 #include <iostream>
 using namespace std;
 
+
+int c = 45;
+
 int main()
 {
-    int a =3, b= 4;
-
-    //arithmetic operation
-    cout<<"Tha value of a+b: "<<a+b<< endl;
-    cout<<"Tha value of a-b: "<<a-b<< endl;
-    cout<<"Tha value of a*b: "<<a*b<< endl;
-    cout<<"Tha value of a/b: "<<a/b<< endl;
-    cout<<"Tha value of a%b: "<<a%b<< endl;
-    cout<<"Tha value of a++: "<<a++<< endl;
-    cout<<"Tha value of a--: "<<a--<< endl;
-    cout<<"Tha value of --a: "<<--a<< endl;
-    cout<<"Tha value of ++a: "<<++a<< endl;
+   // int a ,b,c ;
+   // cout<<"print tha valua of a :"<<endl;
+    //cin>>a;
     
-    // comparisin operation
+    //cout<<"orint tha value of b :"<<endl;
+    //cin>>b;
+    //c = a +b;
 
-    cout<<"following are tha comparising operators in c++"<<endl;
-    cout<<"Tha valu of a==b :"<<(a==b)<<endl;
-    cout<<"Tha valu of a!=b"<<(a!=b)<<endl;
-    cout<<"Tha valu of a>=b"<<(a>=b)<<endl;
-    cout<<"Tha valu of a<=b"<<(a<=b)<<endl;
-    cout<<"Tha valu of a<b"<<(a<b)<<endl;
-    cout<<"Tha valu of a>b"<<(a>b)<<endl;
+   // cout<<"tha sum c "<<c<<endl;
 
-    //logical operation
-    cout<<"following are logical operators in cpp"<<endl;
-    cout<<"tha value of logical and operators ((a==b)&&(a<b))"<<((a==b)&&(a<b))<<endl;
-    cout<<"tha value of logical or operators ((a==b)||(a<b))"<<((a==b)||(a<b))<<endl;
-    cout<<"tha value of logical notoperators (!(a==b))is :"<<(!(a<b))<<endl;
+    //cout<<"tha globle c "<<::c;
+
+   // float d = 34.4f;
+    //cout<<"tha value of d is "<<d<<endl<<"tha value of e is "<<e<<endl;
+    // float x =233;
+     //float & y =x;
 
 
+     //cout<<"print tha "<<x<<endl;
+     //cout<<"print tha "<<y<<endl;
+     
+     //******typecasting ******/
+     int a = 45;
+     float b = 30;
+     cout<<"print tha value of a "<<(float)a<<endl;
+     cout<<"print tha value of a "<<float(a)<<endl;
 
-    return 0;
+
+
+     cout<<"print tha value of b "<<(int)b<<endl;
+     cout<<"print tha value of b "<<int(b)<<endl;
+
+
+        return 0;
 }
