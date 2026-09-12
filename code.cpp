@@ -1,33 +1,21 @@
 #include <iostream>
 
 using namespace std;
-int main()
-{
+int main() {
 
-   // int i =1;
-   // cout<<i<<endl;
-   //syntex for for loop
-  // for(int i=1;  i<40;  i++)
-  // {
-  //  cout<<i<<endl;
- //  }
+  //  what is pointer ? date type which hold tha address of other data typee
+  int a = 3; 
+  int *b = &a;
+  cout<<"tha address of a is"<<&a;
+  cout<<"tha address of a is "<<b;
 
- //while loop in syntex
-      //int i = 1 ;
-      //while(i<=30){
-       // cout<<i<<endl;
-       // i++;
-        
-     // }
-    
-    int i = 1;
-    do{
-        cout<<i<<endl;
-        i++;
-    } while(i<=30);
+  cout<<"tha address of b is "<<*b;
 
-   return 0;
-   
+  // pointer to pointer 
+  int**c = &b;
+  cout<<"tha address of b is "<<&b<<endl;
+  
 
-
+  return 0;
 }
+
