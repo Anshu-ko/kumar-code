@@ -1,25 +1,26 @@
 #include <iostream>
 using namespace std;
 
- typedef struct employee
-{
 
-  int eId;
-  char favChar;
-  float salary;
-}ep;
 
-int main(){
-  ep  anshu;
-  anshu.eId =1;
-  anshu.favChar = 'c';
-  anshu.salary = 100000;
 
-  cout<<"tha value is "<<anshu.eId<<endl;
-  cout<<"tha value is "<<anshu.favChar<<endl;
-  cout<<"tha value is "<<anshu.salary<<endl;
+int sum (int a, int b){
+  int c = a + b;
+  return c;
+}
+
+void swapPointer (int    *a,  *b){
+  int temp = *a;
+  *a = *b;
+  *b = temp;
+}
+
+int main (){
+  int a=4, b=5;
+  cout<<"tha value of a is "<<a<<"and tha value of b is "<<b<<endl;
+  swapPointer (& a,& b);
+  cout<<"tha value of a ia "<<a<<"and tha valul  of b"<<b<<endl;
   return 0;
-
 }
 
 
