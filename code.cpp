@@ -1,31 +1,32 @@
 #include <iostream>
 using namespace std;
 
+int fib (int n){
+  if (n<2){
+    return 1;
+  }
 
-inline int product (int a,int b){
- // static int c =0;//this executes only once 
- // c = c + 1 ;//next time this function is run ,tha value of c will be retained 
-
-  return a*b;
-}
-float moneyReceived (int currentMoney,float factor =1.04){
-  return currentMoney *factor;
+  return fib (n-2) + fib(n-1);
 }
 
-int main (){
-  int a,b;
- // cout<<"entre thha value of a and b"<<endl;
-  // cin>>a>>b;
-  //cout<<"product of a*b"<<product(a,b)<<endl;
-  //cout<<"product of a*b"<<product(a,b)<<endl;
-  //cout<<"product of a*b"<<product(a,b)<<endl;
-  //cout<<"product of a*b"<<product(a,b)<<endl;
-  //cout<<"product of a*b"<<product(a,b)<<endl;
-  //cout<<"product of a*b"<<product(a,b)<<endl;
-  //cout<<"product of a*b"<<product(a,b)<<endl;
-  //cout<<"product of a*b"<<product(a,b)<<endl;
-  int money =10000;
-  cout<<"if you have money"<<money<<"rs in your bank ,you will recive "<<moneyReceived(money,1.1)<<"rs after 1 years";
-  
+int factorial (int n){
+  if (n<=1) {
+    return 1;
+  }
+  return n * factorial (n-1);
+}
+
+
+
+int main() {
+
+  int a;
+  cout<<"enter tha factorial number "<<endl;
+  cin>>a;
+  //cout <<"calculate tha factorial : "<<factorial(a)<<endl;
+  cout<<"entre tha value fib  "<<fib(a)<<endl;
   return 0;
+  
 }
+
+
