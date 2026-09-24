@@ -1,32 +1,34 @@
 #include <iostream>
 using namespace std;
 
-int fib (int n){
-  if (n<2){
-    return 1;
-  }
+class employee
+{     
+      private :
+          int a, b, c ;
+      public :
+          int d, e ;
+          void setData (int a1 ,int b1, int c1);
+          void getData(){
+            cout<<"int tha value of a"<<a<<endl;
+            cout<<"int tha value of b"<<b<<endl;
+            cout<<"int tha value of c"<<c<<endl;
+            cout<<"int tha value of d"<<d<<endl;
+            cout<<"int tha value of e"<<e<<endl;
+          }
+};
 
-  return fib (n-2) + fib(n-1);
+void employee :: setData (int a1 ,int b1, int c1){
+  a = a1;
+  b = b1;
+  c = c1;
 }
 
-int factorial (int n){
-  if (n<=1) {
-    return 1;
-  }
-  return n * factorial (n-1);
-}
+int main(){
+  employee anshu;
+  anshu.d = 4;
+  anshu.e = 49;
+  anshu.setData(1,2,3);
+  anshu.getData();
 
-
-
-int main() {
-
-  int a;
-  cout<<"enter tha factorial number "<<endl;
-  cin>>a;
-  //cout <<"calculate tha factorial : "<<factorial(a)<<endl;
-  cout<<"entre tha value fib  "<<fib(a)<<endl;
   return 0;
-  
 }
-
-
