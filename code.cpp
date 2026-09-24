@@ -1,34 +1,38 @@
 #include <iostream>
 using namespace std;
 
-class employee
-{     
-      private :
-          int a, b, c ;
-      public :
-          int d, e ;
-          void setData (int a1 ,int b1, int c1);
-          void getData(){
-            cout<<"int tha value of a"<<a<<endl;
-            cout<<"int tha value of b"<<b<<endl;
-            cout<<"int tha value of c"<<c<<endl;
-            cout<<"int tha value of d"<<d<<endl;
-            cout<<"int tha value of e"<<e<<endl;
-          }
+class animal 
+{
+  private :
+      int a , b ,c ;
+  public :
+      int d, e;
+      void setData (int a1 ,int b1 , int c1);
+      void getData(){
+        cout<<"en<eter age of a "<<a<<endl;
+        cout<<"en<eter age of b "<<b<<endl;
+        cout<<"en<eter age of c"<<c<<endl;
+        cout<<"en<eter age of d "<<d<<endl;
+        cout<<"en<eter age of e "<<e<<endl;
+      }
+
+
 };
 
-void employee :: setData (int a1 ,int b1, int c1){
+void animal :: setData(int a1, int b1, int c1){
   a = a1;
   b = b1;
   c = c1;
+  
 }
 
 int main(){
-  employee anshu;
-  anshu.d = 4;
-  anshu.e = 49;
-  anshu.setData(1,2,3);
-  anshu.getData();
-
+  animal lion;
+  lion.e = 2;
+  lion.d = 34;
+  lion.setData(23,33,32);
+  lion.getData();
+  
+  
   return 0;
 }
