@@ -1,46 +1,43 @@
 #include <iostream>
 using namespace std;
 
-class shop 
+//this is tha example arry base ..
+class school
 {
-  int itamId[100];
-  int itamPrice[100];
+  int studentNo[300];
+  int classNo [50];
   int counter;
 
 public :
-   void initCounter(void)  {counter = 0; }
-   void setPrice(void);
-   void displayPrice(void);
+   void initcounter (void) {counter = 0;}
+   void setClass (void);
+   void displayClass(void);
+
+
 
 
 };
 
-void shop :: setPrice (void){
-  cout<<"enter tha id "<< counter + 1 <<endl;
-  cin>> itamId[counter];
-  cout<<"enter tha price of your itam"<<endl;
-  cin>> itamPrice[counter];
+void school :: setClass (void) {
+  cout<<"enter tha numbe of student"<< counter +1 <<endl;
+  cin>>studentNo[counter];
+  cout<<"enter tha class"<<endl;
+  cin>> classNo[counter];
   counter++;
 }
 
-void shop :: displayPrice(void){
-  for (int i = 0;  i < counter; i ++ ){
-    cout<<"tha prise of with id "<<itamId[i]<<"is"<<itamPrice[i]<<endl;
+void school :: displayClass (void) {
+  for (int i = 0; i < counter; i++) {
+    cout<<"number of syudent "<<studentNo[i]<<"is"<<classNo[i]<<endl;
   }
-
 }
 
-int main ()
-{
-
-  shop  dukan ;
-  dukan.initCounter();
-  dukan.setPrice();
-  dukan.setPrice();
-  dukan.setPrice();
-  dukan.displayPrice();
-
+int main(){
+  school bright;
+  bright.initcounter();
+  bright.setClass();
+  bright.setClass();
+  bright.setClass();
+  bright.displayClass();
   return 0;
-  
-  
 }
