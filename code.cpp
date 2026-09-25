@@ -1,38 +1,46 @@
 #include <iostream>
 using namespace std;
 
-class animal 
+class shop 
 {
-  private :
-      int a , b ,c ;
-  public :
-      int d, e;
-      void setData (int a1 ,int b1 , int c1);
-      void getData(){
-        cout<<"en<eter age of a "<<a<<endl;
-        cout<<"en<eter age of b "<<b<<endl;
-        cout<<"en<eter age of c"<<c<<endl;
-        cout<<"en<eter age of d "<<d<<endl;
-        cout<<"en<eter age of e "<<e<<endl;
-      }
+  int itamId[100];
+  int itamPrice[100];
+  int counter;
+
+public :
+   void initCounter(void)  {counter = 0; }
+   void setPrice(void);
+   void displayPrice(void);
 
 
 };
 
-void animal :: setData(int a1, int b1, int c1){
-  a = a1;
-  b = b1;
-  c = c1;
-  
+void shop :: setPrice (void){
+  cout<<"enter tha id "<< counter + 1 <<endl;
+  cin>> itamId[counter];
+  cout<<"enter tha price of your itam"<<endl;
+  cin>> itamPrice[counter];
+  counter++;
 }
 
-int main(){
-  animal lion;
-  lion.e = 2;
-  lion.d = 34;
-  lion.setData(23,33,32);
-  lion.getData();
-  
-  
+void shop :: displayPrice(void){
+  for (int i = 0;  i < counter; i ++ ){
+    cout<<"tha prise of with id "<<itamId[i]<<"is"<<itamPrice[i]<<endl;
+  }
+
+}
+
+int main ()
+{
+
+  shop  dukan ;
+  dukan.initCounter();
+  dukan.setPrice();
+  dukan.setPrice();
+  dukan.setPrice();
+  dukan.displayPrice();
+
   return 0;
+  
+  
 }
