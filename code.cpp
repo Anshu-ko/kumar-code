@@ -1,43 +1,48 @@
 #include <iostream>
 using namespace std;
 
-//this is tha example arry base ..
-class school
+class Employee
 {
-  int studentNo[300];
-  int classNo [50];
-  int counter;
+    int id;
+    static int count;
 
-public :
-   void initcounter (void) {counter = 0;}
-   void setClass (void);
-   void displayClass(void);
+public:
+    void setData(void)
+    {
+        cout << "Enter the id" << endl;
+        cin >> id;
+        count++;
+    }
+    void getData(void)
+    {
+        cout << "The id of this employee is " << id << " and this is employee number " << count << endl;
+    }
 
-
-
-
+    static void getCount(void){
+        // cout<<id; // throws an error
+        cout<<"The value of count is "<<count<<endl;
+    }
 };
+// Count is the static data member of class Employee
+int Employee::count; // Default value is 0
 
-void school :: setClass (void) {
-  cout<<"enter tha numbe of student"<< counter +1 <<endl;
-  cin>>studentNo[counter];
-  cout<<"enter tha class"<<endl;
-  cin>> classNo[counter];
-  counter++;
-}
+int main()
+{
+    Employee harry, rohan, lovish;
+    // harry.id = 1;
+    // harry.count=1; // cannot do this as id and count are private
 
-void school :: displayClass (void) {
-  for (int i = 0; i < counter; i++) {
-    cout<<"number of syudent "<<studentNo[i]<<"is"<<classNo[i]<<endl;
-  }
-}
+    harry.setData();
+    harry.getData();
+    Employee::getCount();
 
-int main(){
-  school bright;
-  bright.initcounter();
-  bright.setClass();
-  bright.setClass();
-  bright.setClass();
-  bright.displayClass();
-  return 0;
+    rohan.setData();
+    rohan.getData();
+    Employee::getCount();
+
+    lovish.setData();
+    lovish.getData();
+    Employee::getCount();
+
+    return 0;
 }
