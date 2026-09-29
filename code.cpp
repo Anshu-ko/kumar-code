@@ -1,48 +1,38 @@
 #include <iostream>
 using namespace std;
 
-class Employee
+class complex
 {
-    int id;
-    static int count;
+    int a , b ;
+        public :
+            void setNumber (int n1, int n2 ){
+          
+             a = n1;
+             b = n2;
+           }
+            friend complex sumComplex(complex o1, complex o2, );  
+           void getPrint(){
+            cout <<"tha number "<<a<< " + " <<b<<" i "<<endl;
+           }
 
-public:
-    void setData(void)
-    {
-        cout << "Enter the id" << endl;
-        cin >> id;
-        count++;
-    }
-    void getData(void)
-    {
-        cout << "The id of this employee is " << id << " and this is employee number " << count << endl;
-    }
-
-    static void getCount(void){
-        // cout<<id; // throws an error
-        cout<<"The value of count is "<<count<<endl;
-    }
 };
-// Count is the static data member of class Employee
-int Employee::count; // Default value is 0
 
-int main()
-{
-    Employee harry, rohan, lovish;
-    // harry.id = 1;
-    // harry.count=1; // cannot do this as id and count are private
+complex sumComplex(comlex o1 , complex o2 ){
+    Complex o3;
+    
+    o3.setNumber((o1.a +o2.a), (o1.b+o2b));
+}
 
-    harry.setData();
-    harry.getData();
-    Employee::getCount();
+int main (){
+    complex c1 ,c2;
+    c1.setNumber(4, 5);
+    c1.getPrint ();
 
-    rohan.setData();
-    rohan.getData();
-    Employee::getCount();
+    c2.setNumber (5 , 6);
+    c2.getPrint();
 
-    lovish.setData();
-    lovish.getData();
-    Employee::getCount();
+    sum = sumNumber (c1,c2);
+    sum.setNumber();
 
     return 0;
 }
