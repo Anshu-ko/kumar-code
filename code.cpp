@@ -1,38 +1,59 @@
-#include <iostream>
-using namespace std;
+class complex;
 
-class complex
+
+class calculator 
 {
-    int a , b ;
-        public :
-            void setNumber (int n1, int n2 ){
-          
-             a = n1;
-             b = n2;
-           }
-            friend complex sumComplex(complex o1, complex o2, );  
-           void getPrint(){
-            cout <<"tha number "<<a<< " + " <<b<<" i "<<endl;
-           }
+    public :
+    int add(int a ,int b){
+        return ( a + b);
+    
+    }
+    int sumRealComplex(complex , complex);
+    int sumComComplex (complex, complex);
+};
+
+
+class complex 
+{   int  a,b;
+
+    public :
+
+    void setNumber(int n1 , int n2){
+        a = n1;
+        b = n2;
+
+    }
+
+    void printNumber(){
+        cout<<"enter tha number "<<a<<"+"<<b<<"i"<<endl;
+    }
+
+
+
 
 };
 
-complex sumComplex(comlex o1 , complex o2 ){
-    Complex o3;
-    
-    o3.setNumber((o1.a +o2.a), (o1.b+o2b));
+int calculator :: sumRealComplex(complex o1, complex o2){
+    return (o1.a + o2.a);
+
 }
 
-int main (){
-    complex c1 ,c2;
-    c1.setNumber(4, 5);
-    c1.getPrint ();
+int calculator :: sumCompCoplex (complex o1, complex o2){
+    return (o1.b + o2.b);
+}
 
-    c2.setNumber (5 , 6);
-    c2.getPrint();
 
-    sum = sumNumber (c1,c2);
-    sum.setNumber();
 
+
+    int main()
+{
+    Complex o1, o2;
+    o1.setNumber(1, 4);
+    o2.setNumber(5, 7);
+    Calculator calc;
+    int res = calc.sumRealComplex(o1, o2);
+    cout << "The sum of real part of o1 and o2 is " << res << endl;
+    int resc = calc.sumCompComplex(o1, o2);
+    cout << "The sum of complex part of o1 and o2 is " << resc << endl;
     return 0;
 }
