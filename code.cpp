@@ -2,31 +2,25 @@
 
 using namespace std;
 
-class complex 
-{
-    int a , b;
+class point {
+    int x , y;
     public:
-    complex(int ,int);
-    void printNumber(){
-        cout<<"tha number "<<a<<" + "<<b<<" i "<<endl;
+    point (int a, int b){
+        x = a;
+        y = b;
+    }
+
+    void displayPoint(){
+        cout<<"tha number ("<<x<<","<<y<<")"<<endl;
     }
 };
-complex :: complex(int x , int y)//This is a parameterized constructor as it takes 2 parameters
-{
-    a = x;
-    b = y;
-}
 
 int main(){
-      // Implicit call
-    complex a(23,3);
-    a.printNumber();
-       // Explicit call
-    complex b =complex(3,44); //equal sign ko hatane per bhi code run kar rha hai
-    b.printNumber();
+    point p(3,4);
+    p.displayPoint();
 
+    point q(3,7);
+    q.displayPoint();
 
     return 0;
-
 }
-
