@@ -2,25 +2,31 @@
 
 using namespace std;
 
-class complex// constructor deceleratation
+class complex 
 {
-    int a , b ;
+    int a , b;
     public:
-    complex(void);
-
+    complex(int ,int);
     void printNumber(){
-        cout <<"enter tha number"<< a <<" + "<< b <<" i "<<endl;
+        cout<<"tha number "<<a<<" + "<<b<<" i "<<endl;
     }
 };
-
-complex :: complex(void) //This is a default constructor as it takes no parameters
+complex :: complex(int x , int y)//This is a parameterized constructor as it takes 2 parameters
 {
-    a = 10;
-    b = 10;
-} 
+    a = x;
+    b = y;
+}
 
 int main(){
-    complex c;
-    c.printNumber();
+      // Implicit call
+    complex a(23,3);
+    a.printNumber();
+       // Explicit call
+    complex b =complex(3,44); //equal sign ko hatane per bhi code run kar rha hai
+    b.printNumber();
+
+
     return 0;
+
 }
+
