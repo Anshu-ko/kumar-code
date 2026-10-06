@@ -1,29 +1,63 @@
 #include <iostream>
 using namespace std;
 
-class complex
-{
-    int a, b,c;
+class bankDeposite{
+    int principal;
+    int year;
+    float intrestRate;
+    float returnValue;
 
-public:
-    complex(int x, int y=88, int z=0){
-        a = x;
-        b = y;
-        c = z;
-    }
-
-    void PrintData(){
-        cout<<"enter tha value of x and y and z  "<<a<<" ,"<<b<<" and "<<c<<endl;
-    }
-
-
+    public:
+        bankDeposite(){};
+        bankDeposite(int p,int y, float r );
+        bankDeposite(int p, int y,int r );
+        void show();
 };
-//
-Constructors With Default Arguments
+
+bankDeposite :: bankDeposite(int p, int y , float r){
+    principal = p;
+    year = y;
+    intrestRate = r;
+    returnValue = principal;
+    for(int i = 0; i < y; i++){
+        returnValue = returnValue *(1+intrestRate);
+
+    }
+}
+
+bankDeposite :: bankDeposite(int p, int y, int r)
+{
+    principal = p;
+    year = y;
+    intrestRate = float(r)/100;
+    returnValue = principal;
+    for (int i = 0; i < y; i++)
+    {
+        returnValue = returnValue * (1+intrestRate);
+    }
+}
+
+void bankDeposite :: show(){
+    cout<<"principal value "<<principal<<"return value after "<<year<<"year is"<<returnValue<<endl;
+}
+
 int main(){
-    complex c(1);
-    //c.complex(1,2);
-    c.PrintData();
+    bankDeposite bd1,bd2,bd3;
+    int p,y;
+    float r;
+    int R;
+
+    cout<<"enter tha value p y and r"<<endl;
+    cin>>p>>y>>r;
+
+    bd1 = bankDeposite(p, y, r);
+    bd1.show();
+
+    cout<<"Enter the value of p y and R"<<endl;
+    cin>>p>>y>>R;
+    bd2 = bankDeposite(p, y, R);
+    bd2.show();
 
     return 0;
 }
+
