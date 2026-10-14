@@ -2,65 +2,76 @@
 
 using namespace std;
 
-class base1
+class student
 {
+protected:
+    int roll_no ;
 public:
-    void greet(){
-        cout<<"how are you"<<endl;
+    void setroll_no( int r){
+        roll_no = r;
+    }
+
+    void getroll_no(){
+        cout<<"your rollnumber "<<endl;
     }
 
 };
 
-class base2
+class exam : virtual public student{
+protected:
+    float maths ;
+    float science;
+public:
+    void setmarks(float m1, float m2){
+
+        maths = m1;
+        science = m2;
+
+    }
+    void getmarks(void){
+        cout<<"your result is " <<endl << "maths "<<maths<<endl<<"scienc "<<endl;   
+    }
+
+
+};
+
+class sport : virtual student 
 {
+protected:
+   int pt ;
 public:
-    void greet(){
-        cout<<"kaise ho"<<endl;
-    }
+   void setscore(int r){
+    pt = r;
+   }
 
-};
+   void getdata(void){
+    cout<<"print score "<<pt<<endl;
 
-class derived :  public base1, public base2{
-    int a;
-public :
-    void greet(){
-        base2 : greet();
-
-    }
-};
-
-class B
-{
-public:
-    void say(){
-        cout<<"hello world: "<<endl;
-    }
-};
-
-class D :  public B{
-    int a ;
-
-public:
-   void  say(){
-    cout<<"hellow my dear friend "<<endl;
    }
 
 };
 
+class result : public sport , public exam {
+private:
+    float final;
+public:
+    void display(void){
+        final = maths + science + pt;
+
+        getroll_no();
+        getmarks();
+        getdata();
+    }
+
+};
+
 int main(){
-   /*base1 anshu;
-    base2 anshu2;
-    anshu.greet();
-    anshu2.greet();
-
-    derived d;
-    d.greet(); */
-   
-    B b;
-    b.say();
-
-    D d;
-    d.say();
+    result anshu;
+    anshu.setroll_no(24);
+    anshu.setmarks(334,334);
+    anshu.setscore(444);
+    anshu.display();
 
     return 0;
+    
 }
