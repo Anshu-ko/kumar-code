@@ -1,26 +1,25 @@
-#include <iostream>
-
+#include<iostream>
 using namespace std;
 
+class Complex{
+    int real, imaginary;
+    public:
+        void getData(){
+            cout<<"The real part is "<< real<<endl;
+            cout<<"The imaginary part is "<< imaginary<<endl;
+        }
+
+        void setData(int a, int b){
+            real = a;
+            imaginary = b;
+        }
+
+};
 int main(){
-   /* int a = 3;
-    int *prt= &a;
-
-    cout<<"print tha value of a "<<a<<endl;*/
-    int *arr = new int[3];
-    
-    arr[1] = 12;
-    arr[2] = 23;
-    arr[3] = 34;
-    arr[4] = 67;
-
-    delete[] arr;
-
-    cout<<"print value of arry 1 "<<arr[1]<<endl;
-    cout<<"print value of arry 2 "<<arr[2]<<endl;
-    cout<<"print value of arry 3 "<<arr[3]<<endl;
-    cout<<"print value of arry 4 "<<arr[4]<<endl;
-
+    Complex *ptr = new Complex;
+    (*ptr).setData(1, 54);
+    (*ptr).getData(); 
 
     return 0;
 }
+
