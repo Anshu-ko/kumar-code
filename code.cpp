@@ -1,25 +1,48 @@
-#include<iostream>
+#include <iostream>
+
 using namespace std;
 
-class Complex{
-    int real, imaginary;
-    public:
-        void getData(){
-            cout<<"The real part is "<< real<<endl;
-            cout<<"The imaginary part is "<< imaginary<<endl;
-        }
+class foodItam
+{
+    int id ;
+    int price;
+public:
+    void setData (int a , int b){
+        id = a;
+        price = b;
+    }
 
-        void setData(int a, int b){
-            real = a;
-            imaginary = b;
-        }
+    void getData(){
+        cout<<"enter tha id:"<<id<<endl;
+        cout<<"enter tha price:"<<price<<endl;
+    }
 
 };
-int main(){
-    Complex *ptr = new Complex;
-    (*ptr).setData(1, 54);
-    (*ptr).getData(); 
 
+int main(){
+    int size = 3;
+    foodItam *ptr = new foodItam[size];
+    foodItam *ptrTemp = ptr;
+
+    int p , i;
+    float q;
+    
+    for(i = 0; i < size; i++ ){
+        cout<<"enter tha id and price: "<<i+1<<endl;
+        cin>>p>>q;
+
+        ptr->setData(p,q);
+        *ptr++;
+
+    }
+
+    for(i = 0; i <size; i++){
+        cout<<"itam number:"<<i+1<<endl;
+        ptrTemp->getData();
+        *ptrTemp++;
+
+    }
     return 0;
+
 }
 
