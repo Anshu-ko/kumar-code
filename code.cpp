@@ -2,51 +2,32 @@
 
 using namespace std;
 
+class CWH{
+    protected:
+        string title;
+        float rating;
+    public:
+        CWH(string s, float r){
+            title =  s;
+            rating = r;
+        }
+        virtual void display()=0;
+};
 
-class base
+
+class CWHVideo: public CWH
 {
-    
-public:
-int variable_base_class;
-    virtual void display (){
-        cout<<"displya variable base clasS: "<<variable_base_class<<endl;
-        
-
-    }
-
-
-};
-
-class derived : public base {
-    
-public:
-    int variable_derived_class;
-    
-    void display (){
-        cout<<"displya variable base clasS: "<<variable_base_class<<endl;
-        cout<<"displya variable derived clasS: "<<variable_derived_class<<endl;
-
-    }
-
-
-};
-
-int main(){
-    base *base_class_pointer;
-    base object_base ;
-    derived object_derived;
-
-    base_class_pointer =&object_derived ;// Pointing base class pointer to derived class
-
-    
-    base_class_pointer->display();
-
-    
-    
-    return 0;
-}
-
-
+    float videoLength;
+    public:
+        CWHVideo(string s, float r, float vl): CWH(s, r){
+            videoLength = vl;
+        }
+        void display(){
+            cout<<"This is an amazing video with title "<<title<<endl;
+            cout<<"Ratings: "<<rating<<" out of 5 stars"<<endl;
+            cout<<"Length of this video is: "<<videoLength<<" minutes"<<endl;
+        }
+};    
 
 
 
