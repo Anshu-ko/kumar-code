@@ -1,29 +1,41 @@
 #include <iostream>
 
 using namespace std;
-template<class T1,class T2 , class T3>
-class myclass{
-    public:
-    T1 data1;
-    T2  data2;
-    T3  data3;
-    myclass(T1 a, T2 b ,T3 c){
-        data1 = a;
-        data2 = b;
-        data3 = c;
+template<class T1= int,class T2= float , class T3= char>
+class anshu{
+public:
+    T1 a;
+    T2 b;
+    T3 c;
+
+    anshu(T1 x, T2 y, T3 z){
+        a = x;
+        b = y;
+        c = z;
+
     }
+
     void display(){
-        cout<<this->data1<<endl<<this->data2<<endl<<this->data3;
-        
+        cout<<"enter tha value a "<<a<<endl;
+        cout<<"enter tha value b"<<b<<endl;
+        cout<<"enter tha value c"<<c<<endl;
     }
+
+
+
 };
+
 int main(){
-    myclass <int , float, char > deepak(3  , 3.3 , 'd');
-    deepak.display();
+    anshu <> p(2, 3.3, 's');
+    p.display();
+    
+
+    anshu <float , int ,char > q(2.3, 3, 's');
+    q.display();
     return 0;
-
-
+    
 }
+
 
 
  
