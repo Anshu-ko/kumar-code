@@ -1,41 +1,73 @@
 #include <iostream>
-
 using namespace std;
-template<class T1= int,class T2= float , class T3= char>
-class anshu{
-public:
-    T1 a;
-    T2 b;
-    T3 c;
 
-    anshu(T1 x, T2 y, T3 z){
-        a = x;
-        b = y;
-        c = z;
+/*int main(){
+    int age ;
+    cout<<"enter tha age  "<<endl;
+    cin>>age;
+    if( age >=50 ){
+        cout<<"you are old man "<<endl;
 
     }
 
-    void display(){
-        cout<<"enter tha value a "<<a<<endl;
-        cout<<"enter tha value b"<<b<<endl;
-        cout<<"enter tha value c"<<c<<endl;
+    if(age<=50){
+        cout<<"you are young man "<<endl;
+
+    }
+    if (age == 18){
+        cout<<"you are adult man "<<endl;
+    }
+    if(age>=5){
+        cout<<"you are new bron baby "<<endl;
     }
 
 
 
-};
-
-int main(){
-    anshu <> p(2, 3.3, 's');
-    p.display();
-    
-
-    anshu <float , int ,char > q(2.3, 3, 's');
-    q.display();
     return 0;
+
+}*/
+/*int main(){
+    int a = 10;
+    int  i = 5;
+
+
+    for(int i=0; i < a; i++ ){
+       cout << i <<" "<<endl;
+  
+    }
+
+    while(i<20){
+        cout<< i <<endl;
+        i++;
+    }
+
+    return 0;
+
+}*/
+/*int main(){
+    int i= 5;
     
-}
 
+    while(i<18 ){
 
+        cout<< i <<""<<endl;
+        i++;
+
+    }
+
+    return 0;
+
+}*/
 
  
+int main()
+{
+    int i = 5;
+    do
+    {
+        cout << i << " ";
+        i++;
+    } while (i < 5);
+ 
+    return 0;
+}
