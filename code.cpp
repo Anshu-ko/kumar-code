@@ -1,32 +1,25 @@
 #include <iostream>
 using namespace std;
 
-class complex
-{
-  int x, y;
+int main (){
+  int a = 10;
+  int b = 20;
 
-public:
-  complex(int, int);
+  a = a+b;
+  b = a-b;
+  a = a-b;
+  
 
-  void printnumber()
-  {
-    cout << "enter tha number " << x << "+" << y << "i" << endl;
-  }
-};
+  cout<<a<<endl<<b<<endl;
 
-complex::complex(int a, int b)
-{
- x = a;// jab code sahi ho fir bhi gaber value mil rahi ho to  yaha  dhayan dena ...
-  y = b;
-}
-
-int main()
-{
-  complex a(22, 44);
-  a.printnumber();
-
-  complex b(34, 111);
-  b.printnumber();
 
   return 0;
+
+
+
+
+
+
+
+
 }
